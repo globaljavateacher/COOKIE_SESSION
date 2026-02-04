@@ -13,11 +13,9 @@
 				<input type="button" id="btnLogin" value="로그인">
 			</form>
 			<script>
-				let msg = '<c:out value="${msg}"/>';
-				if ( '' != msg ) {
-					if ( 'ERR_001' == msg ) {
-						alert('아이디 혹은 비밀번호가 틀렸습니다.');
-					}
+				let msg = '<c:out value="${param.msg}"/>';
+				if ( 'ERR_001' == msg ) {
+					alert('아이디 혹은 비밀번호가 틀렸습니다.');
 				}
 				document.getElementById('btnLogin').addEventListener('click', function(){
 					let userId = document.getElementById('userId');
