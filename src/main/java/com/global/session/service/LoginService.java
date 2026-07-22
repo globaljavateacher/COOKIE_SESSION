@@ -7,7 +7,7 @@ public class LoginService {
 	public static boolean login(HttpServletRequest req) {
 		String userId = req.getParameter("userId");
 		String userPw = req.getParameter("userPw");
-		if ( "hong".equals(userId) && "1234".equals(userPw) ) {
+		if ( "root".equals(userId) && "1234".equals(userPw) ) {
 			req.getSession().setAttribute("LOGIN", true);
 			req.getSession().setAttribute("userId", userId);
 			return true;
